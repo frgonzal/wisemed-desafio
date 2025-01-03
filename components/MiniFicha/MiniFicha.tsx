@@ -16,7 +16,7 @@ function MiniFicha({ dataFicha, onDragStart }: MiniFichaProps) {
 
   return (
     <div 
-      className="bg-background rounded-md mx-2 max-w-[400px]"
+      className="bg-background rounded-md mx-2 max-w-[400px] cursor-pointer w-full"
       onDragStart={() => onDragStart(dataFicha.id)}
       draggable
     >
