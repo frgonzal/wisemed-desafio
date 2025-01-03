@@ -27,8 +27,8 @@ function MiniFicha({ dataFicha, onDragStart }: MiniFichaProps) {
         <DetailsFicha info={info}/>
 
         <div className="flex gap-1">
-          <Image src="/Property 1=Default.svg" width={25} height={25} alt="icon"/>
-          <Image src="/Property 1=Default (1).svg" width={25} height={25} alt="icon"/>
+          <Image src="/heart.svg" width={25} height={25} alt="icon"/>
+          <Image src="/battery.svg" width={25} height={25} alt="icon"/>
         </div>
 
         <Select title="Tipo de Urgencia" content={["Urgente", "Electiva"]}/>
