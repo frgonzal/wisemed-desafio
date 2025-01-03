@@ -1,4 +1,4 @@
-# Desafío Mini Ficha
+# Desafío Mini Ficha WiseMed
 
 ## Instrucciones para ejecutar la aplicación.
 
@@ -18,3 +18,22 @@ Instalar las dependencias:
 
     npm run build
     npm run preview
+
+
+## Instrucciones con Docker
+
+### Construir el contenedor
+```bash
+docker-compose build
+```
+
+### Ejecutar la aplicación
+
+```bash
+docker-compose up
+```
+
+### Aceder a la aplicación
+```
+http://localhost:3000
+```
