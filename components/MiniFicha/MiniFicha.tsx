@@ -4,6 +4,8 @@ import PatientFicha from "./PatientFicha";
 import DetailsFicha from "./DetailsFicha";
 import Select from "@/components/Select/Select";
 import Image from "next/image";
+import HeartIcon from "@/public/heart.svg";
+import BloodIcon from "@/public/blood.svg";
 
 interface MiniFichaProps {
   dataFicha: DataFicha;
@@ -27,11 +29,11 @@ function MiniFicha({ dataFicha, onDragStart }: MiniFichaProps) {
         <DetailsFicha info={info}/>
 
         <div className="flex gap-1">
-          <Image src="/heart.svg" width={25} height={25} alt="icon"/>
-          <Image src="/battery.svg" width={25} height={25} alt="icon"/>
+          <Image src={HeartIcon} width={25} height={25} alt="icon"/>
+          <Image src={BloodIcon} width={25} height={25} alt="icon"/>
         </div>
 
-        <Select title="Tipo de Urgencia" content={["Urgente", "Electiva"]}/>
+        <Select title="Tipo de Urgencia" content={["Urgente", "Electiva"]} id={dataFicha.id.toString()}/>
       </div>
 
     </div>

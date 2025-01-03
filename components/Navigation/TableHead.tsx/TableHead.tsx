@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Select from "@/components/Select/Select";
+import CheckupIcon from "@/public/Checkup.svg";
 
 function TableHead() {
   return (
     <div className="bg-[var(--light-blue)] pl-4 pr-2 py-4 flex justify-between items-center">
 
       <div className="flex gap-1 items-center">
-        <Image src="/Checkup.svg" width={28} height={28} alt="icon"/>
+        <Image src={CheckupIcon} width={28} height={28} alt="icon"/>
         <div className="text-2xl font-bold text-primary"> 
           Tabla de Evaluación Quirúrgica
         </div>

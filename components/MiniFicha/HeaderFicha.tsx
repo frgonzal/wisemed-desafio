@@ -1,4 +1,5 @@
 import Image from "next/image";
+import JointsBone from "@/public/Joints Bone.svg";
 
 interface HeaderFichaProps {
   title: string;
@@ -13,7 +14,7 @@ function HeaderFicha({ title, subtitle }: HeaderFichaProps) {
         <div className="text-base"> {subtitle} </div>
       </div>
       <div className="">
-        <Image src="/Joints Bone.svg" width={60} height={60} alt="icon"/>
+        <Image src={JointsBone} width={60} height={60} alt="icon"/>
       </div>
     </div>
   );

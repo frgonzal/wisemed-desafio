@@ -3,13 +3,14 @@
 interface SelectProps {
   title: string;
   content: string[];
+  id?: string;
 }
 
-function Select({ title, content }: SelectProps) {
+function Select({ title, content, id}: SelectProps) {
   return (
     <div className="relative w-full">
       <label
-        htmlFor={title}
+        htmlFor={id ? id : title}
         className="text-blue-600 text-sm font-semibold"
       >
         {title}
@@ -21,7 +22,7 @@ function Select({ title, content }: SelectProps) {
 
       <div className="relative">
         <select
-          id={title}
+          id={id ? id : title}
           name={title}
           className="w-full appearance-none border border-blue-500 rounded-md p-3 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 cursor-pointer"
           defaultValue=""
