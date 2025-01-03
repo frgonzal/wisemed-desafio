@@ -1,4 +1,3 @@
-import { InfoMiniFicha } from "@/types/ficha";
 import MiniFicha from "@/components/MiniFicha/MiniFicha";
 import { DataFicha } from "@/types/ficha";
 import Image from "next/image";
@@ -7,10 +6,9 @@ interface ColumnProps {
   dataFichas: DataFicha[];
   bgColor: string;
   title: string;
-  type: Symbol;
+  type: symbol;
   onDragStart: (id: number) => void;
-  onDragDrop: (column: Symbol) => void;
-  onDragOver: (event: React.DragEvent<HTMLDivElement>) => void;
+  onDragDrop: (column: symbol) => void;
   iconLeft?: string;
   iconRight?: string;
   iconLeftColor?: string;
@@ -18,7 +16,7 @@ interface ColumnProps {
 }
 
 
-function Column({ dataFichas, bgColor, title, type, onDragStart, onDragDrop, onDragOver, iconLeft, iconRight, iconLeftColor, iconRightColor}: ColumnProps) {
+function Column({ dataFichas, bgColor, title, type, onDragStart, onDragDrop, iconLeft, iconRight, iconLeftColor, iconRightColor}: ColumnProps) {
   return (
     <div 
       className={`w-1/4 mx-2 rounded-md min-h-full h-full ${bgColor}`}

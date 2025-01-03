@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Column from './Column';
-import { InfoMiniFicha } from '@/types/ficha';
 import { DataFicha } from '@/types/ficha';
 import { COLUMN_TYPE } from '@/constants/ficha';
 import React from 'react';
@@ -28,7 +27,7 @@ function Table(){
     }
   }
 
-  const handleDragDrop = (column: Symbol) => {
+  const handleDragDrop = (column: symbol) => {
     if (draggedItem === null) return;
 
     const updatedFichas = dataFichas.filter(ficha => ficha.id !== draggedItem.id);
@@ -54,7 +53,6 @@ function Table(){
         iconRightColor="bg-sky_blue"
         onDragStart={handleDragStart}
         onDragDrop={handleDragDrop}
-        onDragOver={handleDragOver}
       />
       <Column 
         title="Solicitudes Pendientes" 
@@ -67,7 +65,6 @@ function Table(){
         iconRightColor="bg-sky_blue"
         onDragStart={handleDragStart}
         onDragDrop={handleDragDrop}
-        onDragOver={handleDragOver}
       />
       <Column 
         title="Por Programar" 
@@ -78,7 +75,6 @@ function Table(){
         iconRightColor="bg-sky_blue"
         onDragStart={handleDragStart}
         onDragDrop={handleDragDrop}
-        onDragOver={handleDragOver}
       />
       <Column 
         title="En Programación" 
@@ -89,7 +85,6 @@ function Table(){
         iconRightColor="bg-light_green"
         onDragStart={handleDragStart}
         onDragDrop={handleDragDrop}
-        onDragOver={handleDragOver}
       />
     </div>
   );
